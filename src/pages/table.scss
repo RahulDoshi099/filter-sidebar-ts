@@ -1,0 +1,49 @@
+.table-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+    table {
+      border-collapse: collapse;
+      margin-bottom: 1rem;
+  
+      th,
+      td {
+        padding: 0.5rem;
+        border: 1px solid #ccc;
+        text-align: left;
+      }
+  
+      th {
+        background-color: #f2f2f2;
+      }
+  
+      tr:nth-child(even) {
+        background-color: #f2f2f2;
+      }
+    }
+  
+    .controls {
+      display: flex;
+      align-items: center;
+  
+      input {
+        margin-right: 1rem;
+        padding: 0.5rem;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        font-size: 1rem;
+      }
+  
+      button {
+        padding: 0.5rem 1rem;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 3px;
+        font-size: 1rem;
+        cursor: pointer;
+      }
+    }
+  }
+  

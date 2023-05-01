@@ -1,0 +1,46 @@
+.greyhound-list {
+    &__search {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1rem;
+  
+      input[type="text"] {
+        margin-right: 1rem;
+        padding: 0.5rem;
+        border-radius: 0.25rem;
+        border: none;
+        outline: none;
+        font-size: 1rem;
+        width: 100%;
+        max-width: 20rem;
+      }
+  
+      select {
+        margin-right: 1rem;
+        padding: 0.5rem;
+        border-radius: 0.25rem;
+        border: none;
+        outline: none;
+        font-size: 1rem;
+        max-width: 20rem;
+      }
+    }
+  
+    &__filter-button {
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      background-color: #0077c2;
+      border: none;
+      border-radius: 0.25rem;
+      color: #fff;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+  
+      &:hover {
+        background-color: #005ea2;
+      }
+    }
+  }
+  

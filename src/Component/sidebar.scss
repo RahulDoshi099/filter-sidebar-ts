@@ -1,0 +1,119 @@
+/* Define variables */
+$sidebar-bg-color: #000;
+$sidebar-header-bg-color: #000;
+$sidebar-content-padding: 20px;
+
+/* Define mixin for transition */
+@mixin transition($property, $duration) {
+  -webkit-transition: $property $duration ease-in-out;
+  -moz-transition: $property $duration ease-in-out;
+  -o-transition: $property $duration ease-in-out;
+  transition: $property $duration ease-in-out;
+}
+
+/* Define styles */
+.sidebar-container {
+  display: flex;
+  justify-content: flex-end;
+  margin: 10px;
+}
+
+.sidebar-button {
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -300px;
+  width: 300px;
+  height: 100%;
+  background-color: $sidebar-bg-color;
+  @include transition(right, 0.3s);
+  z-index: 999;
+  color: #fff;
+
+  &.open {
+    right: 0;
+  }
+
+  .sidebar-header {
+    background-color: $sidebar-header-bg-color;
+    padding: $sidebar-content-padding;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    h2 {
+      margin: 0;
+    }
+    .btns {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+    .clearallbtn {
+      background-color: transparent;
+      border: none;
+      font-size: 16px;
+      font-weight: 900;
+      cursor: pointer;
+    }
+
+    .close-button {
+      background-color: transparent;
+      color: white;
+      border: none;
+      font-size: 22px;
+      cursor: pointer;
+    }
+  }
+
+  .sidebar-content {
+    padding: $sidebar-content-padding;
+
+    .filter-container {
+      margin-bottom: 20px;
+      .menu-items {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        cursor: pointer;
+
+        h3 {
+          color: gray;
+        }
+      }
+      .rotate-180 {
+        transform: rotate(180deg);
+      }
+
+      h3 {
+        margin: 0 0 10px;
+        cursor: pointer;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 10px;
+      }
+
+      input[type="checkbox"] {
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+        vertical-align: bottom;
+        color: #fff;
+        background-color: rgba(255, 255, 255, 1);
+        margin-right: 20px;
+        margin-bottom: 0;
+      }
+
+    }
+  }
+}
